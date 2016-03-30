@@ -10,9 +10,11 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
-        ndk {
-            moduleName "source"   // Name of C module (i.e. libsource)
-        }
+//        编译生成时，需要加入以下注释掉的代码
+//        ndk {
+//            moduleName "source"   // Name of C module (i.e. libsource.so)
+//        }
+//        如果是引入.so 文件，需要将so文件放到jniLibs下面并且和jni文件夹平级
     }
     buildTypes {
         release {
